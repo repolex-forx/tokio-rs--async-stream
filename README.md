@@ -1,1 +1,120 @@
-Initializing
+# Repolex Knowledge Graph of tokio-rs/async-stream
+
+RDF knowledge graph data for [tokio-rs/async-stream](https://github.com/tokio-rs/async-stream), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download tokio-rs/async-stream
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── b0b2f22df8e87b7fed7b2fa234509797adbff7db
+│   │       └── chunk-001.nq.gz
+│   ├── lsp
+│   │   └── b0b2f22df8e87b7fed7b2fa234509797adbff7db.nq.gz
+│   └── repolex
+│       └── b0b2f22df8e87b7fed7b2fa234509797adbff7db
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 0c0214c0891eb438f3665ac81a1191143635f2dc.nq.gz
+│   ├── 1377054f14b6ada9b81df30b26c2f596cecd3b77.nq.gz
+│   ├── 1a8ed6a338b42a7d5ce02014a302d2f9fe73d6b1.nq.gz
+│   ├── 1b69bdaf5e7e2d64dd98e3bdcb6f46e1704cf83c.nq.gz
+│   ├── 24e733047bfb583e4575f85911935282f43741f7.nq.gz
+│   ├── 2b1406519f6748b3698b08603503afb1a368ddbd.nq.gz
+│   ├── 2b969ee41ae0baabb4c528e03e82022f557c5984.nq.gz
+│   ├── 318e404e47407688f6c40adb94363a1553eb3b81.nq.gz
+│   ├── 3568c3fc1e0acadc85a984bbc56c72619f164745.nq.gz
+│   ├── 37fcd3479cc821c141d1e95ccab2d241b7ff44a1.nq.gz
+│   ├── 4b7a9442cfdad4e3e12d6f55c37ccf9bb7966cb5.nq.gz
+│   ├── 4b890d209b7a8be980a5e26443e578a6ebf58e66.nq.gz
+│   ├── 4d2f6c2178a56342302096d0e33271844c2ccd8c.nq.gz
+│   ├── 4e26a3d1b13fe4f719a08ff031e4bb10c30f7003.nq.gz
+│   ├── 590ffbd9d15ec0357a8b5b2148687f79fde57114.nq.gz
+│   ├── 594dcc99488cf4eb1d250d6599a222d668b41e9a.nq.gz
+│   ├── 61fd153e7ce2261d0ac5bb1d5fd9a0bb3b3d703b.nq.gz
+│   ├── 693699042b1a8ccf697636d3cd34b200f3a8278b.nq.gz
+│   ├── 79c5012f91ee26d053eefe65fb41ea56b741aded.nq.gz
+│   ├── 7b1e04673dfa7ea07bd40e2068a49a65f1f8c661.nq.gz
+│   ├── 89760263df9273234ed42fbd011ec2ca2a88bd4a.nq.gz
+│   ├── 8cbd7d631f517bfa0f94edada1d47918363d330d.nq.gz
+│   ├── 951be34dc427ee4c81efc6bed46766a9e7d24eff.nq.gz
+│   ├── 9ae6cf2c81fa95a6eca9bf7259db8e0a50cb6817.nq.gz
+│   ├── 9b81e62bd981ce86aa837526746efa48a0c3302b.nq.gz
+│   ├── b0c7d6b6995c997ddff7d3e5467a32e6eab026ba.nq.gz
+│   ├── b2fe1b0d7e93c3f06d6478f048e1c70fbffae277.nq.gz
+│   ├── c404e62719be4cbde30d8ddba095c509f1aed8a4.nq.gz
+│   ├── cd6ebd9f80e8b0310db005bedbf263fc26180853.nq.gz
+│   ├── cf0b729af033f2623312a0f954c1636a6575bd3b.nq.gz
+│   ├── cfb88652fcc8b800aa21676eea3ce9cbe7e001a9.nq.gz
+│   ├── d6fcdca9f374fecd249a5e2f6f9cd65db45aebb0.nq.gz
+│   ├── db2451aa6088970429b791a244eabd289cdef072.nq.gz
+│   ├── e862c81d6314e71b6142c0d16e1cd8d473ab3352.nq.gz
+│   ├── f2663b8a2b0be41fe2a39aedd8071a767ac9153f.nq.gz
+│   ├── f78b947773839921de660e2544fe521564f038f5.nq.gz
+│   └── ff408ab76d3c53e32245402fb2b2f9576eaff831.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── dep
+│   └── b0b2f22df8e87b7fed7b2fa234509797adbff7db.nq.gz
+├── filetree
+│   └── b0b2f22df8e87b7fed7b2fa234509797adbff7db.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+15 directories, 47 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[tokio-rs/async-stream](https://github.com/tokio-rs/async-stream)
+
+---
+*Parsed on 2026-11-22 by [repolex](https://repolex.ai)*

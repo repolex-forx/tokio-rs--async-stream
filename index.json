@@ -1,0 +1,11 @@
+{
+  "org": "tokio-rs",
+  "repo": "async-stream",
+  "versions": [
+    {
+      "commit": "b0b2f22df8e87b7fed7b2fa234509797adbff7db",
+      "tag": "v0.3.6",
+      "parsed_at": "2026-11-22T21:48:56.880208+00:00"
+    }
+  ]
+}
